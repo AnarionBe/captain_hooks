@@ -1,38 +1,34 @@
-import React, {Component} from 'react';
+import React from "react";
 
-class AddTodo extends Component {
-  state = {
-    title: ''
-  }
+export default props => {
+    const [s_title, s_setTitle] = React.useState("");
 
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value })
+    const onSubmit = e => {
+        e.preventDefault();
+        props.addTodo(s_title);
+        s_setTitle("");
+    };
 
-  onSubmit = (e) => {
-    e.preventDefault();
-    this.props.addTodo(this.state.title);
-    this.setState({title: ''});
-  }
+    const onChange = e => {
+        s_setTitle(e.target.value);
+    };
 
-  render() {
     return (
-      <form onSubmit={this.onSubmit} style={{ display: 'flex'}}>
-        <input 
-          type="text" 
-          name="title" 
-          style={{flex: '10', padding: '5px'}}
-          placeholder="Add todo..." 
-          value={this.state.title}
-          onChange={this.onChange}
-        />
-        <input  
-          type="submit"
-          value="submit"
-          className="btn"
-          style={{ flex: '1'}}
-        />
-      </form>
-    )
-  }
-}
-
-export default AddTodo;
+        <form onSubmit={onSubmit} style={{ display: "flex" }}>
+            <input
+                type="text"
+                name="title"
+                style={{ flex: "10", padding: "5px" }}
+                placeholder="Add todo..."
+                value={s_title}
+                onChange={onChange}
+            />
+            <input
+                type="submit"
+                value="submit"
+                className="btn"
+                style={{ flex: "1" }}
+            />
+        </form>
+    );
+};
