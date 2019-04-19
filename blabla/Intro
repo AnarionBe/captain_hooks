@@ -81,10 +81,22 @@ LES COMPONENTS
 
      Peut contenir un state ainsi que des méthodes métier 
 
-        => créer App.js
+        => modifier App.js
+        => créer src/Copmponents/Todos.js
 
   2/ Functionnal components
 
      Ne fait que rendre ce qui lui est passé
 
         => créer Header.js
+
+=> utiliser map pour Todos.js
+=> créer TodoItem.js
+=> ajouter les prop-types
+=> Voir style dans TodoItem
+=> ajout checkbox TodoItem (+ event)
+=> Arrow fct / this binding (toggleCompletion)
+=> remonter toggleCompletion dans App.js (comp. drilling)
+=> delete button
+=> AddTodo (avec state, value et onChange, form submit
+=> uuid

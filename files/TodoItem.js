@@ -5,12 +5,24 @@ class TodoItem extends Component {
 
 
   render() {
-    
+
+/*    getStyle = () => {*/
+      //return {
+        //background: '#c4c4c4',
+        //padding: '10px',
+        //borderBottom: '1px #000 dotted',
+        //textDecoration: this.props.todo.completed ? 'line-through' : 'none'
+      //}
+    /*}*/
+
+
     //const { id, title } = this.props.todo
     
     return (
     
-      <div style={this.getStyle()}>
+      <div style={{ backgroundColor: '#ccc' }}> 
+
+      {/*<div style={this.getStyle()}>*/}
 
           <p>{this.props.todo}</p>
 
