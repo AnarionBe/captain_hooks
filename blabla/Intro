@@ -42,12 +42,14 @@ INSTALLATION :
 
           public/index.html
           src/App.js
+          src/App.css             cfr fichier Github
 
       supprimer : 
         
-          src/logo.svg 
-          src/serviceWorker.js    +appel dans src/index.js
-
+          src/logo.svg            + appel dans App.js
+          src/serviceWorker.js    + appel dans src/index.js
+          src/index.css           + appel dans src/index.js
+ 
   4/ Installer les React Dev Tools
   ---------------------------------
 
