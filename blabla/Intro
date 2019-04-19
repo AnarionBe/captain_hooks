@@ -1,0 +1,88 @@
+REACT  
+*****
+
+=> Librairie (/"Framework") Front-End JS pour créer des SPA
+
+=> Basée sur les Components (imbriqués les un dans les autres)
+
+=> Les Components peuvent être des classes ou des fonctions
+
+=> Utilise un DOM virtuel pour n'updater que les éléments à modifier
+
+=> Syntaxe JSX 
+
+
+INSTALLATION :
+**************
+
+  1/ Vérifier que node et npm sont installés
+  ------------------------------------------
+        node -v
+
+        npm -v
+
+  2/  a. Installer Create-React-App
+  ---------------------------------  
+
+          sudo apt-get install create-react-app
+          
+              (..ou autre gestionnaire de paquet)          
+
+          create-react-app NOM_DE_L'APP 
+
+      b. utiliser npx pour faire le taf sans devoir installer CRA 
+      -----------------------------------------------------------
+
+          npx create-react-app NOM_DE_L'APP     
+
+  3/ Nettoyer CRA
+  ----------------
+     
+      Nettoyer 
+
+          public/index.html
+          src/App.js
+
+      supprimer : 
+        
+          src/logo.svg 
+          src/serviceWorker.js    +appel dans src/index.js
+
+  4/ Installer les React Dev Tools
+  ---------------------------------
+
+      Via gestionnaire d'extensions du naviguateur
+
+
+STRUCTURE DES FICHIERS
+**********************
+
+    package.json          appelle les dépendances react, react-dom et react-scripts
+
+    public/index.html     <div id="root"> point d'entrée de l'App
+
+    src/App.js            Component parent, qui englobe les autres
+
+    src/index.js          Se charge d'injecter l'App dans la page html
+
+
+LANCEMENT DU SERVEUR
+********************
+
+    npm run start
+
+
+LES COMPONENTS
+**************
+
+  1/ Class components
+
+     Peut contenir un state ainsi que des méthodes métier 
+
+        => créer App.js
+
+  2/ Functionnal components
+
+     Ne fait que rendre ce qui lui est passé
+
+        => créer Header.js
